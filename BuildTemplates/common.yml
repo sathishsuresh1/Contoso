@@ -1,0 +1,14 @@
+# Repo: Contoso/BuildTemplates
+# File: common.yml
+parameters:
+- name: 'vmImage'
+  default: 'ubuntu-22.04'
+  type: string
+
+jobs:
+- job: Build
+  pool:
+    vmImage: ${{ parameters.vmImage }}
+  steps:
+  - script: npm install
+  - script: npm test

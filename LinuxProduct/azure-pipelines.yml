@@ -1,0 +1,10 @@
+# Repo: Contoso/LinuxProduct
+# File: azure-pipelines.yml
+resources:
+  repositories:
+    - repository: templates
+      type: github
+      name: Contoso/BuildTemplates
+
+jobs:
+- template: common.yml@templates  # Template reference

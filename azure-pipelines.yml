@@ -1,9 +1,13 @@
+# Repo: Contoso/WindowsProduct
+# File: azure-pipelines.yml
 resources:
   repositories:
     - repository: templates
       type: github
       name: Contoso/BuildTemplates
-      endpoint: sathishsuresh1
-      
+      ref: refs/tags/v1.0 # optional ref to pin to
+
 jobs:
-  - template: common.yml@templates
+- template: common.yml@templates  # Template reference
+  parameters:
+    vmImage: 'windows-latest'

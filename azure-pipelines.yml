@@ -1,6 +1,9 @@
 resources:
   repositories:
     - repository: templates
-      type: git
+      type: github
       name: Contoso/BuildTemplates
-      ref: refs/heads/main
+      endpoint: sathishsuresh1
+      
+jobs:
+  - template: common.yml@templates

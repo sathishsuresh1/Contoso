@@ -5,7 +5,8 @@ resources:
     - repository: templates
       type: github
       name: Contoso/BuildTemplates
-      ref: refs/tags/v1.0 # optional ref to pin to
+      endpoint: sathishsuresh1
+      
 
 jobs:
 - template: common.yml@templates  # Template reference

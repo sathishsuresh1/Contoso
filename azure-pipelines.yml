@@ -1,0 +1,6 @@
+resources:
+  repositories:
+    - repository: templates
+      type: git
+      name: Contoso/BuildTemplates
+      ref: refs/heads/main
